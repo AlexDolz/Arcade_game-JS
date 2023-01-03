@@ -273,7 +273,7 @@ function addPedestrian(x, y) {
       y = Math.max(newY, minY);
       pedestrian.style.top = `${y}px`;
       if (newY > minY) {
-        setTimeout(drawFrameY, 900 / framePerSecond);
+        setTimeout(drawFrameY, 850 / framePerSecond);
       }
       if (y === minY) {
         levelComplete();
