@@ -22,8 +22,8 @@ html {
 
 .btn {
   margin-top: 100px;
-  width: 360px;
-  height: 40px;
+  width: 480px;
+  height: 85px;
   font-size: 18px;
   color: rgb(241, 49, 49);
   font-size: 20px;
@@ -36,6 +36,7 @@ html {
   cursor: pointer;
   user-select: none;
   transition: all 0.1s ease-out;
+  text-align: center;
 }
 .game_over_button {
   width: 130px;
