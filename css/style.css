@@ -21,9 +21,11 @@ html {
 }
 
 .btn {
-  margin-top: 125px;
+  position: fixed;
+  top: 0;
+  margin-top: 3px;
   width: 480px;
-  height: 85px;
+  height: 58px;
   font-size: 18px;
   color: rgb(241, 49, 49);
   font-size: 20px;
@@ -130,6 +132,31 @@ img {
   width: 17px;
   height: 17px;
   position: fixed;
+}
+/* .sound_on {
+  position: fixed;
+  top: 0;
+  left: 200px;
+  font-size: 30px;
+  margin-top: 5px;
+} */
+.start {
+  background-color: black;
+  color: rgb(241, 49, 49);
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 838px) {
+  .btn {
+    display: none;
+  }
 }
 
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) {

@@ -1,3 +1,24 @@
+const trafficAudio = document.querySelector('#traffic_audio');
+const bonusAudio = document.querySelector('#bonus_audio');
+const gameOverAudio = document.querySelector('#game_over_audio');
+const crashAudio = document.querySelector('#crash_audio');
+const startAudio = document.querySelector('#start_audio');
+const levelCompleteAudio = document.querySelector('#level_complete_audio');
+const startGame = document.querySelector('.start');
+// window.onload = function () {
+//   document.querySelector('#traffic_audio').play();
+// };
+document.addEventListener('click', () => {
+  startGame.style.display = 'none';
+  startAudio.play();
+  trafficAudio.play();
+  trafficAudio.loop = true;
+  runTimer();
+});
+// document.removeEventListener('click', () => {
+//   startAudio.play();
+// });
+
 let time = 45;
 function runTimer() {
   const needToDecrease =
@@ -12,6 +33,7 @@ function runTimer() {
     seconds < 10 ? `0${seconds}` : seconds
   }:${miliseconds < 10 ? `0${miliseconds}` : miliseconds}`;
   if (seconds === 0 && miliseconds === 0) {
+    gameOverAudio.play();
     gameOverTime();
     life = 0;
     drawLife();
@@ -19,7 +41,6 @@ function runTimer() {
   }
   setTimeout(runTimer, 100);
 }
-runTimer();
 
 let vehiclesCollection = [];
 const vehiclesColors = [
@@ -145,6 +166,7 @@ function gameOver() {
     document.getElementById('go').removeAttribute('disabled');
     gameOver.classList.remove('game_over');
     document.body.removeChild(gameOver);
+    startAudio.play();
     life = 3;
     drawLife();
     goToLevel(2);
@@ -175,6 +197,8 @@ function gameOverTime() {
     document.getElementById('go').removeAttribute('disabled');
     gameOver.classList.remove('game_over');
     document.body.removeChild(gameOver);
+    startAudio.play();
+
     life = 3;
     drawLife();
     goToLevel(2);
@@ -196,6 +220,7 @@ function levelComplete() {
   button.classList.add('btn', 'game_over_button');
   button.innerHTML = 'Next level';
   button.addEventListener('click', function () {
+    startAudio.play();
     life = 3;
     drawLife();
     document.body.removeChild(levelComplete);
@@ -242,6 +267,7 @@ function addPedestrian(x, y) {
     const hasXCollision = dX >= -10 && dX <= 16;
     const hasYCollision = dY >= -10 && dY <= 16;
     if (hasXCollision && hasYCollision) {
+      bonusAudio.play();
       time = time + 15;
       bonusX = -Infinity;
       bonusY = -Infinity;
@@ -257,9 +283,11 @@ function addPedestrian(x, y) {
       const newY = y - speed / framePerSecond;
       const collision = hasCollision(x, newY, 10, 10);
       if (collision) {
+        crashAudio.play();
         life--;
         drawLife();
         if (life === 0) {
+          gameOverAudio.play();
           gameOver();
         }
         button.removeAttribute('disabled');
@@ -277,6 +305,7 @@ function addPedestrian(x, y) {
       }
       if (y === minY) {
         levelComplete();
+        levelCompleteAudio.play();
       }
       bonusCheck();
     }

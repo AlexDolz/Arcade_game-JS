@@ -17,12 +17,39 @@
     <div class="lifebar"></div>
     <div id="timer" class="timer">00:30:00</div>
     <div class="container">
+      <div class="start">
+        Click mouse to start a game. <br />
+        <br />Rules: press "space" key to go. Control Pedestrian left <- right
+        -> with keyboard <br />
+        <br />
+        Run across the street, collect watches to add time
+      </div>
+      <!-- <div class="sound_on">
+        <ion-icon name="volume-high-sharp"></ion-icon>
+      </div>
+      <div class="sound_off">
+        <ion-icon name="volume-mute-sharp"></ion-icon>
+      </div> -->
       <div class="btn" id="go">
         Click! Or press "space" key to go. Control Pedestrian left <- right ->
         with keyboard
       </div>
     </div>
+    <audio id="traffic_audio" src="./audio/traffic_audio.wav"></audio>
+    <audio id="bonus_audio" src="./audio/bonus.wav"></audio>
+    <audio id="game_over_audio" src="./audio/game_over.wav"></audio>
+    <audio id="crash_audio" src="./audio/crash.wav"></audio>
+    <audio id="start_audio" src="./audio/start.mp3"></audio>
+    <audio id="level_complete_audio" src="./audio/level_complete.wav"></audio>
 
     <script src="./script.js"></script>
+    <!-- <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script> -->
   </body>
 </html>
