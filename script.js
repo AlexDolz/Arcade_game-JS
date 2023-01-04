@@ -8,7 +8,7 @@ const startGame = document.querySelector('.start');
 // window.onload = function () {
 //   document.querySelector('#traffic_audio').play();
 // };
-document.addEventListener('click', () => {
+startGame.addEventListener('click', () => {
   startGame.style.display = 'none';
   startAudio.play();
   trafficAudio.play();
