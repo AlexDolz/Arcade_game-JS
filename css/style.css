@@ -194,6 +194,9 @@ img {
   .game_over_title {
     display: none;
   }
+  .start {
+    display: none;
+  }
 }
 @media (orientation: portrait) and (hover: none) and (pointer: coarse) {
   .container {
@@ -220,6 +223,9 @@ img {
     display: none;
   }
   .game_over_title {
+    display: none;
+  }
+  .start {
     display: none;
   }
 }
