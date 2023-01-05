@@ -5,9 +5,38 @@ const crashAudio = document.querySelector('#crash_audio');
 const startAudio = document.querySelector('#start_audio');
 const levelCompleteAudio = document.querySelector('#level_complete_audio');
 const startGame = document.querySelector('.start');
-// window.onload = function () {
-//   document.querySelector('#traffic_audio').play();
-// };
+const soundOn = document.querySelector('.sound_on');
+const soundOff = document.querySelector('.sound_off');
+soundOff.style.display = 'none';
+
+function stopAudio() {
+  trafficAudio.muted = true;
+  bonusAudio.muted = true;
+  gameOverAudio.muted = true;
+  crashAudio.muted = true;
+  startAudio.muted = true;
+  levelCompleteAudio.muted = true;
+}
+function playAudio() {
+  trafficAudio.muted = false;
+  bonusAudio.muted = false;
+  gameOverAudio.muted = false;
+  crashAudio.muted = false;
+  startAudio.muted = false;
+  levelCompleteAudio.muted = false;
+}
+
+soundOn.addEventListener('click', () => {
+  soundOn.style.display = 'none';
+  soundOff.style.display = 'block';
+  stopAudio();
+});
+soundOff.addEventListener('click', () => {
+  soundOff.style.display = 'none';
+  soundOn.style.display = 'block';
+  playAudio();
+});
+
 startGame.addEventListener('click', () => {
   startGame.style.display = 'none';
   startAudio.play();
@@ -15,9 +44,6 @@ startGame.addEventListener('click', () => {
   trafficAudio.loop = true;
   runTimer();
 });
-// document.removeEventListener('click', () => {
-//   startAudio.play();
-// });
 
 let time = 45;
 function runTimer() {

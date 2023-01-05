@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 html {
   font-family: 'Prosto One', cursive;
@@ -133,13 +134,20 @@ img {
   height: 17px;
   position: fixed;
 }
-/* .sound_on {
+.sound_on {
   position: fixed;
   top: 0;
-  left: 200px;
+  right: 180px;
   font-size: 30px;
-  margin-top: 5px;
-} */
+  margin-top: 9px;
+}
+.sound_off {
+  position: fixed;
+  top: 0;
+  right: 180px;
+  font-size: 30px;
+  margin-top: 9px;
+}
 .start {
   background-color: black;
   color: rgb(241, 49, 49);
@@ -153,7 +161,7 @@ img {
   text-align: center;
 }
 
-@media screen and (max-width: 838px) {
+@media screen and (max-width: 900px) {
   .btn {
     display: none;
   }
