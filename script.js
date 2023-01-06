@@ -7,6 +7,9 @@ const levelCompleteAudio = document.querySelector('#level_complete_audio');
 const startGame = document.querySelector('.start');
 const soundOn = document.querySelector('.sound_on');
 const soundOff = document.querySelector('.sound_off');
+const levelCounterDiv = document.querySelector('.level_counter');
+
+let levelCounter = 1;
 soundOff.style.display = 'none';
 
 function stopAudio() {
@@ -184,11 +187,14 @@ function gameOver() {
   gameOverTitle.classList.add('game_over_title');
   gameOverTitle.innerHTML = 'Game over';
 
-  gameOver.append(gameOverTitle, gameOverImg, restartBtn);
+  const gameOverResult = document.createElement('div');
+  gameOverResult.classList.add('game_over_result');
+  gameOverResult.innerHTML = `Your result: level ${levelCounter}`;
+
+  gameOver.append(gameOverTitle, gameOverResult, gameOverImg, restartBtn);
   document.body.appendChild(gameOver);
 
   restartBtn.addEventListener('click', () => {
-    document.getElementById('go').style.display = 'flex';
     document.getElementById('go').removeAttribute('disabled');
     gameOver.classList.remove('game_over');
     document.body.removeChild(gameOver);
@@ -215,11 +221,14 @@ function gameOverTime() {
   gameOverTitle.classList.add('game_over_title');
   gameOverTitle.innerHTML = 'Game over';
 
-  gameOver.append(gameOverTitle, gameOverTimeImg, restartBtn);
+  const gameOverResult = document.createElement('div');
+  gameOverResult.classList.add('game_over_result');
+  gameOverResult.innerHTML = `Your result: level ${levelCounter}`;
+
+  gameOver.append(gameOverTitle, gameOverResult, gameOverTimeImg, restartBtn);
   document.body.appendChild(gameOver);
 
   restartBtn.addEventListener('click', () => {
-    document.getElementById('go').style.display = 'flex';
     document.getElementById('go').removeAttribute('disabled');
     gameOver.classList.remove('game_over');
     document.body.removeChild(gameOver);
@@ -238,6 +247,10 @@ function levelComplete() {
   const levelComplete = document.createElement('div');
   levelComplete.classList.add('level_complete');
 
+  levelCounterDiv.classList.add('level_counter');
+  levelCounter++;
+  levelCounterDiv.innerHTML = `Level ${levelCounter}`;
+
   const levelCompleteTitle = document.createElement('div');
   levelCompleteTitle.classList.add('game_over_title');
   levelCompleteTitle.innerHTML = 'Level complete';
@@ -251,7 +264,6 @@ function levelComplete() {
     drawLife();
     document.body.removeChild(levelComplete);
     nextLevel();
-    document.getElementById('go').style.display = 'flex';
     document.getElementById('go').removeAttribute('disabled');
   });
 

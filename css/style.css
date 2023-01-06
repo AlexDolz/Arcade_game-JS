@@ -160,9 +160,23 @@ img {
   font-size: 30px;
   text-align: center;
 }
+.level_counter {
+  position: fixed;
+  top: 0;
+  left: 160px;
+  color: black;
+  margin-top: 9px;
+  font-size: 20px;
+}
+.game_over_result {
+  font-size: 25px;
+  color: red;
+  z-index: 2;
+  font-weight: bold;
+}
 
-@media screen and (max-width: 900px) {
-  .btn {
+@media screen and (max-width: 948px) {
+  .btn:not(.game_over_button) {
     display: none;
   }
 }
