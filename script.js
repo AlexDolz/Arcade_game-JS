@@ -202,6 +202,8 @@ function gameOver() {
     life = 3;
     drawLife();
     goToLevel(2);
+    levelCounter = 1;
+    levelCounterDiv.innerHTML = 'Level 1';
   });
 }
 
@@ -233,10 +235,11 @@ function gameOverTime() {
     gameOver.classList.remove('game_over');
     document.body.removeChild(gameOver);
     startAudio.play();
-
     life = 3;
     drawLife();
     goToLevel(2);
+    levelCounter = 1;
+    levelCounterDiv.innerHTML = 'Level 1';
   });
 }
 
