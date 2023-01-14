@@ -181,7 +181,7 @@ img {
   }
 }
 
-@media (orientation: landscape) and (min-width: 220px) and (max-width: 948px) {
+@media not all and (pointer: fine) {
   .container {
     background-color: black;
     background-image: none;
@@ -212,7 +212,7 @@ img {
     display: none;
   }
 }
-@media (orientation: portrait) and (min-width: 220px) and (max-width: 948px) {
+/* @media not all and (orientation: portrait) and (hover: hover) and (pointer: fine) {
   .container {
     background-color: black;
     background-image: none;
@@ -242,4 +242,4 @@ img {
   .start {
     display: none;
   }
-}
+} */
