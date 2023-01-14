@@ -181,7 +181,7 @@ img {
   }
 }
 
-@media not all and (pointer: fine) {
+@media (any-pointer: coarse) {
   .container {
     background-color: black;
     background-image: none;
