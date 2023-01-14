@@ -212,34 +212,3 @@ img {
     display: none;
   }
 }
-/* @media not all and (orientation: portrait) and (hover: hover) and (pointer: fine) {
-  .container {
-    background-color: black;
-    background-image: none;
-  }
-  .container::after {
-    content: 'Sorry, this game runs only on desktop';
-    text-align: center;
-    font-size: 77px;
-    color: yellow;
-    z-index: 10;
-  }
-  .btn {
-    display: none;
-  }
-  .bonus {
-    display: none;
-  }
-  .level_complete {
-    display: none;
-  }
-  img {
-    display: none;
-  }
-  .game_over_title {
-    display: none;
-  }
-  .start {
-    display: none;
-  }
-} */
