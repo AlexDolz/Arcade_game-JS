@@ -181,7 +181,7 @@ img {
   }
 }
 
-@media (orientation: landscape) and (min-width: 220px) and (max-width: 700px) {
+@media (orientation: landscape) and (min-width: 220px) and (max-width: 948px) {
   .container {
     background-color: black;
     background-image: none;
@@ -212,7 +212,7 @@ img {
     display: none;
   }
 }
-@media (orientation: portrait) and (min-width: 220px) and (max-width: 700px) {
+@media (orientation: portrait) and (min-width: 220px) and (max-width: 948px) {
   .container {
     background-color: black;
     background-image: none;
