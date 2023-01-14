@@ -181,7 +181,7 @@ img {
   }
 }
 
-@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (min-width: 320px) and (max-width: 800px) {
+@media (orientation: landscape) and (hover: none) and (pointer: none) and (min-width: 320px) and (max-width: 800px) {
   .container {
     background-color: black;
     background-image: none;
@@ -212,7 +212,7 @@ img {
     display: none;
   }
 }
-@media (orientation: portrait) and (hover: none) and (pointer: coarse) and (min-width: 320px) and (max-width: 800px) {
+@media (orientation: portrait) and (hover: none) and (pointer: none) and (min-width: 320px) and (max-width: 800px) {
   .container {
     background-color: black;
     background-image: none;
