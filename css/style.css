@@ -181,7 +181,7 @@ img {
   }
 }
 
-@media (orientation: landscape) and (hover: none) and (pointer: none) {
+@media (orientation: landscape) and (hover: none) and (pointer: fine) {
   .container {
     background-color: black;
     background-image: none;
@@ -212,7 +212,7 @@ img {
     display: none;
   }
 }
-@media (orientation: portrait) and (hover: none) and (pointer: none) {
+@media (orientation: portrait) and (hover: none) and (pointer: fine) {
   .container {
     background-color: black;
     background-image: none;
